@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Contact Us</title>
+		<link rel="shortcut icon" href="favicon.ico">
+<script src="https://code.jquery.com/jquery-2.1.0.min.js" type="text/javascript"></script>
+		<link href="slider.css" rel="stylesheet" type="text/css">
+			<script type="text/javascript">
+			$(document).ready(function(){
+				$('#emailID').keyup(function(){
+					$("#emailreg").remove();
+					var email = $(this).val();
+					var regex = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+					if(!regex.test(email))
+					$(this).after("<span id='emailreg'>Invalid Email</span>")
+				});
+			})
+			</script>
+	</head>
+<body>
+<!-- MENU START -->
+<div id="top-name">
+	<h1 class="cname">7 PM</h1>
+</div>
+<form action="Search" method="post">
+<div id="wrapper">
+	<ul class="nav">
+		<li><a href="http://localhost:8080/M2-S1-GB/Default.html" class="nav-item drop">Home</a></li>
+		<li><a href="http://localhost:8080/M2-S1-GB/7pm.html" class="nav-item drop">Restaurants</a></li>
+		<li class="contact-nav"><a href="http://localhost:8080/M2-S1-GB/contact.html" class="nav-item drop">Contact</a>	</li>
+		<li class="search-nav"><input name="searchBox" id="searchBox" type="text" placeholder="Restaurant Type"></li>
+		<li class="search-nav last"><input name="address" id="address" type="text" placeholder="City/Zip Code"></li>
+		<li><input type="image" id="search" src="images/search.png" alt="Submit" width="35" height="39"></li>
+		<li class="login-nav"><a href="http://localhost:8080/M2-S1-GB/signin.html" class="nav-item drop"><span id="username"><span id="signintab">Sign In</span></span></a>
+			<div class="drop-form">		
+			<form></form>
+			<form action="update.html"><input type="submit" value="Change Password"></form>
+			<form action="delete.html"><input type="submit" value="Delete Account"></form>		
+			<form action="signup.html"><input type="submit" value="Sign Up"></form>
+			</div>
+		</li>
+		<li><input type="image" id="logoutbtn" src="images/logout.png" alt="Submit" width="80" height="38"></li>
+	</ul>
+</div>
+</form>
+<br/>
+<!-- MENU END -->
+
+
+<div class="newFrame">
+<h1>Contact</h1>
+<form method="post" action="Mail">
+
+<table>
+	<tr><td>Name <td><input type="text"  name="name"></tr>
+	<tr><td>E-mail <td><input type="email"  name="email" id="emailID"><tr><span id="emailreg"></span></tr></tr>
+	<tr><td>Message <td><textarea cols="40" rows="5" name="message"></textarea></tr>
+	<tr><td><input type="submit" value="Send Request" name="SendRequest"></tr>
+</table>	
+</form>
+</div>
+</body>
+</html>

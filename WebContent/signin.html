@@ -1,0 +1,64 @@
+	<!DOCTYPE html>
+<html>
+  <head>
+   <meta charset="UTF-8">
+    <title>SignIn page</title>
+    <link rel="shortcut icon" href="favicon.ico">
+       <link rel="stylesheet" type="text/css" href="slider.css">
+       
+       <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+       <script type="text/javascript" src="signin.js"></script>
+  </head>
+ 
+  <body>
+   
+<!-- MENU START -->
+<div id="top-name">
+	<h1 class="cname">7 PM</h1>
+</div>
+<form action="Search" method="post">
+<div id="wrapper">
+	<ul class="nav">
+		<li><a href="http://localhost:8080/M2-S1-GB/Default.html" class="nav-item drop">Home</a></li>
+		<li><a href="http://localhost:8080/M2-S1-GB/7pm.html" class="nav-item drop">Restaurants</a></li>
+		<li class="contact-nav"><a href="http://localhost:8080/M2-S1-GB/contact.html" class="nav-item drop">Contact</a>	</li>
+		<li class="search-nav"><input name="searchBox" id="searchBox" type="text" placeholder="Restaurant Type"></li>
+		<li class="search-nav last"><input name="address" id="address" type="text" placeholder="City/Zip Code"></li>
+		<li><input type="image" id="search" src="images/search.png" alt="Submit" width="35" height="39"></li>
+		<li class="login-nav"><a href="http://localhost:8080/M2-S1-GB/signin.html" class="nav-item drop"><span id="usernamesignin"><span id="signintab">Sign In</span></span></a>
+			<div class="drop-form">		
+			<form></form>
+			<form action="update.html"><input type="submit" value="Change Password"></form>
+			<form action="delete.html"><input type="submit" value="Delete Account"></form>		
+			<form action="signup.html"><input type="submit" value="Sign Up"></form>
+			</div>
+		</li>
+		<li><input type="image" id="logoutbtn" src="images/logout.png" alt="Submit" width="80" height="38"></li>
+	</ul>
+</div>
+</form>
+<br/>
+<!-- MENU END -->
+
+<div class="newFrame">
+<h2>Sign In</h2>
+<br>
+<table>
+<tbody>
+<tr>
+<td><input id="username" maxlength="45" name="username" type="text" placeholder="User Name"/> </td>
+</tr>
+<tr>
+<td><input id="password" maxlength="45" name="password" type="password" placeholder="Password"/></td>
+</tr>
+</tbody></table>
+
+<button id="SignUp">Sign In</button><br>
+
+<form action="signup.html">
+<input type="submit" value="Sign Up">
+</form>
+
+   </div>
+  </body>
+</html>

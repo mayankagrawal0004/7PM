@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+
+		<title>7 PM</title>
+		<link rel="shortcut icon" href="favicon.ico">
+		<link href="images/7.png" rel="icon" type="image/png">
+		<link href="weather.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="https://code.jquery.com/jquery-2.1.0.min.js" type="text/javascript"></script>
+		<script src="weather.js" type="text/javascript"></script>
+		
+	</head>
+
+	<body>
+
+<!-- MENU START -->
+<div id="top-name">
+	<h1 class="cname">7 PM</h1>
+</div>
+<form action="Search" method="post">
+<div id="wrapper">
+	<ul class="nav">
+		<li><a href="http://localhost:8080/M2-S1-GB/Default.html" class="nav-item drop">Home</a></li>
+		<li><a href="http://localhost:8080/M2-S1-GB/7pm.html" class="nav-item drop">Restaurants</a></li>
+		<li class="contact-nav"><a href="http://localhost:8080/M2-S1-GB/contact.html" class="nav-item drop">Contact</a>	</li>
+		<li class="search-nav"><input name="searchBox" id="searchBox" type="text" placeholder="Restaurant Type"></li>
+		<li class="search-nav last"><input name="address" id="address" type="text" placeholder="City/Zip Code"></li>
+		<li><input type="image" id="search" src="images/search.png" alt="Submit" width="35" height="39"></li>
+		<li class="login-nav"><a href="http://localhost:8080/M2-S1-GB/signin.html" class="nav-item drop"><span id="username"><span id="signintab">Sign In</span></span></a>
+			<div class="drop-form">		
+			<form></form>
+			<form action="update.html"><input type="submit" value="Change Password"></form>
+			<form action="delete.html"><input type="submit" value="Delete Account"></form>		
+			<form action="signup.html"><input type="submit" value="Sign Up"></form>
+			</div>
+		</li>
+		<li><input type="image" id="logoutbtn" src="images/logout.png" alt="Submit" width="80" height="38"></li>
+	</ul>
+</div>
+</form>
+<br/>
+<!-- MENU END -->
+
+		<div class="newFrame">
+			<div class='floatLeft'>
+			<h1>Restaurants</h1>
+
+			<div class="loadingIcon" id="mapCanvas"></div>
+
+			<div id="weatherLocations"></div>
+
+			<div id="weatherLocationContainerTemplate">
+				<div class="weatherLocationContainer">
+					<h2 class="weatherLocationHeading"></h2>
+					<div>
+						<div class="loadingIcon weatherIcon"></div>
+						<div class="temperatureAndWeatherSummary">
+							<span class="temperature"></span>
+							<br>
+							<span class="weatherSummary"></span>
+						</div>
+					</div>
+					<h3 class="weatherTime"></h3>
+					<h4 class="weatherTimezone"></h4>
+				</div>
+			</div>
+			</div>
+			<div class='floatRight'>
+			<!--  Restuarant List-->
+			<h2>Restaurant List</h2>
+			<div id="list">
+			</div>
+			</div>
+			
+<p class='floatClear' id="references">Map and geodetic data courtesy of <a href="https://developers.google.com/maps/">Google Maps</a>, weather data courtesy of <a href="http://forecast.io/">Forecast</a>, and weather icons courtesy of <a href="http://www.dotvoid.com/weather-icons/">Dotvoid</a>. Restaurant data is courtesy of <a href="http://www.yelp.com/">yelp</a>, and e-mailing functionality is courtesy of javamail api.</p>
+	</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3&sensor=false&callback=weatherUtility.initializeMap" type="text/javascript"></script>
+<div style='overflow: auto;'></div>
+
+		</body>
+</html>
